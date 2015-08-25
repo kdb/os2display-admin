@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "74f365c952523ab88ea7d0f019fc939c",
+    "hash": "e363360f8c13b1ac13d49206ab3cd735",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -759,6 +759,65 @@
                 "User management"
             ],
             "time": "2015-06-01 00:57:03"
+        },
+        {
+            "name": "imag/ldap-bundle",
+            "version": "v2.3.1",
+            "target-dir": "IMAG/LdapBundle",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BorisMorel/LdapBundle.git",
+                "reference": "44c5e9a03a4829a074c15b4397fed5ea40b705e5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BorisMorel/LdapBundle/zipball/44c5e9a03a4829a074c15b4397fed5ea40b705e5",
+                "reference": "44c5e9a03a4829a074c15b4397fed5ea40b705e5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ldap": "*",
+                "php": ">=5.3.3",
+                "symfony/symfony": ">2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "IMAG\\LdapBundle": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CeCILL"
+            ],
+            "authors": [
+                {
+                    "name": "Juti Noppornpitak",
+                    "email": "jutin@nationalfibre.net",
+                    "homepage": "https://github.com/instaclick",
+                    "role": "Fork Maintainer"
+                },
+                {
+                    "name": "Boris Morel",
+                    "email": "boris.morel@imag.fr",
+                    "homepage": "https://github.com/BorisMorel",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Shiroyuki",
+                    "homepage": "https://github.com/shiroyuki",
+                    "role": "Fork Maintainer"
+                },
+                {
+                    "name": "John Kary",
+                    "email": "john@johnkary.net",
+                    "homepage": "http://johnkary.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "LDAP Bundle for Symfony 2",
+            "homepage": "http://github.com/BorisMorel/LdapBundle",
+            "time": "2014-02-26 13:30:18"
         },
         {
             "name": "imagine/imagine",
@@ -2176,7 +2235,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/cdd9f8322b3673aa27d6e45a7f3addebb7bfeaf8",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/6a3b6c01c78406ef18359c7ac57891e5de145dd1",
                 "reference": "cdd9f8322b3673aa27d6e45a7f3addebb7bfeaf8",
                 "shasum": ""
             },
@@ -2380,7 +2439,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/a52613c338cc2e024bb2343be10b6a348cb9cd82",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/69217cd11f1771137d3a3d7bfd4c115ed82919f0",
                 "reference": "a52613c338cc2e024bb2343be10b6a348cb9cd82",
                 "shasum": ""
             },
@@ -2442,7 +2501,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/dba166c6c52591f1bfafa8514b848a3bae23a557",
+                "url": "https://api.github.com/repos/sonata-project/SonataDatagridBundle/zipball/cc42f2801011d7ebc65edda451a2efa4b4d1fbb9",
                 "reference": "dba166c6c52591f1bfafa8514b848a3bae23a557",
                 "shasum": ""
             },
@@ -2542,7 +2601,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/422f8a56e7a3b5c1d3d63d120718d64f3af41b0f",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/a883b10c09d136de617c1e53c2782648909a8c06",
                 "reference": "422f8a56e7a3b5c1d3d63d120718d64f3af41b0f",
                 "shasum": ""
             },
@@ -2999,7 +3058,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/0e615bf13fc8a786aca904dd6f7b083bc089d0d9",
+                "url": "https://api.github.com/repos/sonata-project/SonataUserBundle/zipball/ec09378a100dfe6285562e864c2286ef9104059e",
                 "reference": "0e615bf13fc8a786aca904dd6f7b083bc089d0d9",
                 "shasum": ""
             },
@@ -3419,12 +3478,12 @@
             "version": "v1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fabpot/Twig-extensions.git",
+                "url": "https://github.com/twigphp/Twig-extensions.git",
                 "reference": "c0ab818595338dd5569369bfce2552d02cec5d50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fabpot/Twig-extensions/zipball/c0ab818595338dd5569369bfce2552d02cec5d50",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/c0ab818595338dd5569369bfce2552d02cec5d50",
                 "reference": "c0ab818595338dd5569369bfce2552d02cec5d50",
                 "shasum": ""
             },

@@ -11,6 +11,11 @@ security:
   providers:
     fos_userbundle:
       id: fos_user.user_manager
+    ldap:
+      id: imag_ldap.security.user.provider
+    multiples:
+      chain:
+        providers: [fos_userbundle, ldap]
 
   firewalls:
     dev:
@@ -25,41 +30,18 @@ security:
       pattern: ^/api/screen/get
       security: false
 
-    api:
-      pattern: ^/api(.*)
-      context: user
-      form_login:
-        check_path: /api/login_check
-      entry_point: indholdskanalen_main.api_authentication_service
-
     zencoder:
       pattern: ^/zencoder/callback
       security: false
 
-    admin:
-      pattern: /admin(.*)
-      context: user
-      form_login:
-        provider: fos_userbundle
-        login_path: /admin/login
-        use_forward: false
-        check_path: /admin/login_check
-        failure_path: null
-      logout:
-        path: /admin/logout
-      anonymous: true
-
     main:
       pattern: ^/
-      context: user
-      form_login:
-        provider: fos_userbundle
-        login_path: /login
-        use_forward: false
-        check_path: /login_check
-        failure_path: null
-      logout:       true
-      anonymous:    true
+      anonymous: ~
+      imag_ldap:
+        provider: ldap
+      logout:
+        path:           /logout
+        target:         /
       remember_me:
         key:      "%secret%"
         lifetime: 604800 # a week
@@ -86,10 +68,23 @@ security:
 
     # Secured part of the site
     - { path: ^/admin/, role: [ROLE_ADMIN, ROLE_SONATA_ADMIN] }
-    - { path: ^/, role: ROLE_USER }
-
-    #Testing
-    - { path: ^/twig/, role: IS_AUTHENTICATED_ANONYMOUSLY }
+    - { path: ^/, role: [ROLE_USER, ROLE_LDAP] }
 
   acl:
     connection: default
+
+imag_ldap:
+  client:
+    host: %ad_ldap_host%
+    port: 389
+    username: %ad_username%
+    password: %ad_password%
+  user:
+    base_dn: %ad_ldap_base_dn%
+    filter: (&(objectClass=user)(memberof=%ad_group%))
+    name_attribute: cn
+  role:
+    base_dn: %ad_ldap_base_dn%
+    name_attribute: cn
+    user_id: username
+  user_class: Indholdskanalen\MainBundle\User\LdapUser

@@ -49,3 +49,9 @@ parameters:
     itk_log_error_callback: /api/error
     itk_log_log_to_console: true
     itk_log_log_level: all
+
+    ad_username: username
+    ad_password: password
+    ad_group: group
+    ad_ldap_host: host
+    ad_ldap_base_dn: dn
