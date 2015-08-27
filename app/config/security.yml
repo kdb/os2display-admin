@@ -13,7 +13,7 @@ security:
       id: fos_user.user_manager
     ldap:
       id: imag_ldap.security.user.provider
-    multiples:
+    fos_and_ldap:
       chain:
         providers: [fos_userbundle, ldap]
 
@@ -38,7 +38,7 @@ security:
       pattern: ^/
       anonymous: ~
       imag_ldap:
-        provider: fos_userbundle
+        provider: %login_user_provider%
       logout:
         path:           /logout
         target:         /

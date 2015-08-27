@@ -55,3 +55,5 @@ parameters:
     ad_group: group
     ad_ldap_host: host
     ad_ldap_base_dn: dn
+
+    login_user_provider: fos_userbundle #options: fos_and_ldap, fos_userbundle, ldap
