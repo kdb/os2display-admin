@@ -38,7 +38,7 @@ security:
       pattern: ^/
       anonymous: ~
       imag_ldap:
-        provider: ldap
+        provider: fos_userbundle
       logout:
         path:           /logout
         target:         /

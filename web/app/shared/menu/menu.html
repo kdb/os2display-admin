@@ -18,6 +18,7 @@
       <a href="" class="nav--item" data-ng-click="forcePush()">Force push content</a>
     </div>
     <div class="nav--item-wrapper">
+      <div class="nav--text-item header--nav-menu-logged-in-user">Logget ind som {{ currentUser ? (currentUser.fullname ? currentUser.fullname : currentUser.username) : "..." }}</div>
       <a href="/logout" class="nav--item">Log ud</a>
     </div>
   </nav>

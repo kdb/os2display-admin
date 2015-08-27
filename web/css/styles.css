@@ -2513,6 +2513,8 @@ html.is-locked body {
     @media only screen and (min-width: 50em) {
       .header--nav-menu-label-text {
         display: inline-block; } }
+  .header--nav-menu-logged-in-user {
+    color: #b3b3b3; }
   .header--sub {
     background: #fff;
     color: #222;
@@ -2769,6 +2771,9 @@ html.is-locked body {
   .nav--sub-item {
     padding-left: 1.5em;
     font-size: 1.5em; }
+  .nav--text-item {
+    display: block;
+    font-size: 2em; }
   .nav--toggle-icon {
     cursor: pointer;
     float: right;

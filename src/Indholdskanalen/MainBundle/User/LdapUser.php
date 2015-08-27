@@ -17,9 +17,9 @@ class LdapUser extends \IMAG\LdapBundle\User\LdapUser {
   /**
    * @JMS\Groups({"api"})
    * @JMS\VirtualProperty
-   * @JMS\SerializedName("displayname")
+   * @JMS\SerializedName("fullname")
    */
-  public function getDisplayName() {
+  public function getFullName() {
     return $this->getDisplayname();
   }
 
@@ -28,7 +28,7 @@ class LdapUser extends \IMAG\LdapBundle\User\LdapUser {
    * @JMS\VirtualProperty
    * @JMS\SerializedName("username")
    */
-  public function getUsername() {
+  public function getUser() {
     return $this->getUsername();
   }
 }
