@@ -63,7 +63,7 @@ class Screen {
   private $channelScreenRegions;
 
   /**
-   * @ORM\Column(name="user", type="integer", nullable=true)
+   * @ORM\Column(name="user", type="string", nullable=true)
    * @Groups({"api", "search"})
    */
   private $user;
@@ -258,7 +258,7 @@ class Screen {
   /**
    * Set user
    *
-   * @param integer $user
+   * @param string $user
    * @return Screen
    */
   public function setUser($user) {
@@ -270,7 +270,7 @@ class Screen {
   /**
    * Get user
    *
-   * @return integer
+   * @return string
    */
   public function getUser() {
     return $this->user;

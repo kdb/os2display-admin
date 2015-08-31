@@ -65,7 +65,7 @@ class Slide {
   private $options;
 
   /**
-   * @ORM\Column(name="user", type="integer", nullable=true)
+   * @ORM\Column(name="user", type="string", nullable=true)
    * @Groups({"api", "search"})
    */
   private $user;

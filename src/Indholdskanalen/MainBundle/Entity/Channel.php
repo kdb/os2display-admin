@@ -70,7 +70,7 @@ class Channel {
   /**
    * User that created the channel.
    *
-   * @ORM\Column(name="user", type="integer", nullable=true)
+   * @ORM\Column(name="user", type="string", nullable=true)
    * @Groups({"api", "search"})
    */
   private $user;
@@ -446,7 +446,7 @@ class Channel {
   /**
    * Set user
    *
-   * @param integer $user
+   * @param string $user
    * @return Channel
    */
   public function setUser($user) {
@@ -458,7 +458,7 @@ class Channel {
   /**
    * Get user
    *
-   * @return integer
+   * @return string
    */
   public function getUser() {
     return $this->user;
