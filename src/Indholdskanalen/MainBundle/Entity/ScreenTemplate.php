@@ -89,6 +89,12 @@ class ScreenTemplate {
   private $options;
 
   /**
+   * @ORM\Column(name="empty_options", type="json_array", nullable=true)
+   * @Groups({"api", "api-bulk", "middleware"})
+   */
+  private $empty_options;
+
+  /**
    * Constructor
    */
   public function __construct() {
@@ -364,4 +370,19 @@ class ScreenTemplate {
   public function setOptions($options) {
     $this->options = $options;
   }
+
+  /**
+   * @return mixed
+   */
+  public function getEmptyOptions() {
+    return $this->empty_options;
+  }
+
+  /**
+   * @param mixed $empty_options
+   */
+  public function setEmptyOptions($empty_options) {
+    $this->empty_options = $empty_options;
+  }
+
 }

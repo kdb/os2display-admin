@@ -251,6 +251,10 @@ class TemplateService extends ContainerAware {
             $template->setOptions($config->options);
           };
 
+          if (!empty($config->empty_options)) {
+            $template->setEmptyOptions($config->empty_options);
+          };
+
           // Check if the template comes with any tools.
           $template->setTools(array());
           if (!empty($config->tools)) {

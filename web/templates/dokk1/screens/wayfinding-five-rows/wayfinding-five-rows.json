@@ -16,10 +16,12 @@
     "arrows": [
       {
         "name": "Venstre",
+        "relative_path": "../tools/arrows/left.png",
         "path": "templates/dokk1/screens/tools/arrows/left.png"
       },
       {
         "name": "Højre",
+        "relative_path": "../tools/arrows/right.png",
         "path": "templates/dokk1/screens/tools/arrows/right.png"
       }
 
@@ -27,11 +29,32 @@
     "icons": [
       {
         "name": "cup",
+        "relative_path": "../tools/icons/cup.png",
         "path": "templates/dokk1/screens/tools/icons/cup.png"
       },
       {
         "name": "globe",
+        "relative_path": "../tools/icons/globe.png",
         "path": "templates/dokk1/screens/tools/icons/globe.png"
+      }
+    ]
+  },
+  "empty_options": {
+    "regions": [
+      {
+        "region": 0
+      },
+      {
+        "region": 1
+      },
+      {
+        "region": 2
+      },
+      {
+        "region": 3
+      },
+      {
+        "region": 4
       }
     ]
   }

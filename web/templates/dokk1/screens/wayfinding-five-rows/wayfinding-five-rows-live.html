@@ -3,29 +3,23 @@
   <!-- Rows start -->
   <div style="padding-top: 80px;">
     <div style="width: 1080px; height: 160px; position: relative;">
-      <div data-ng-class="{'is-active': region === 1}" data-ng-click="triggerTool({name: 'channel-picker-tool', region: 1})">
-        <region region-id="1" show-progress="true" scale="0.50"></region>
+      <div>
+        <img src="{{templateDirectory + '/' + options.regions[0]['arrow']}}">
+        <span>{{options.regions[0].text}}</span>
+        <img src="{{templateDirectory + '/' + options.regions[0]['icon']}}">
       </div>
     </div>
     <div style="width: 1080px; height: 160px; position: relative;">
-      <div data-ng-class="{'is-active': region === 2}" data-ng-click="triggerTool({name: 'channel-picker-tool', region: 2})">
-        <region region-id="2" show-progress="true" scale="0.50"></region>
-      </div>
+
     </div>
     <div style="width: 1080px; height: 160px; position: relative;">
-      <div data-ng-class="{'is-active': region === 3}" data-ng-click="triggerTool({name: 'channel-picker-tool', region: 3})">
-        <region region-id="3" show-progress="true" scale="0.50"></region>
-      </div>
+
     </div>
     <div style="width: 1080px; height: 160px; position: relative;">
-      <div data-ng-class="{'is-active': region === 4}" data-ng-click="triggerTool({name: 'channel-picker-tool', region: 4})">
-        <region region-id="4" show-progress="true" scale="0.50"></region>
-      </div>
+
     </div>
     <div style="width: 1080px; height: 160px; position: relative;">
-      <div data-ng-class="{'is-active': region === 5}" data-ng-click="triggerTool({name: 'channel-picker-tool', region: 5})">
-        <region region-id="5" show-progress="true" scale="0.50"></region>
-      </div>
+      
     </div>
   </div>
   <!-- Rows end -->

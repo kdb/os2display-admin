@@ -28,11 +28,18 @@
           icons: '='
         },
         replace: false,
-        template: '<span data-ng-repeat="icon in icons" data-ng-click="clickIcon(icon.path)" data-ng-style="{\'background-color\': icon.path === field ? \'green\' : \'red\'}" data-ng-class="{\'is-selected\': icon.path === field}"><img data-ng-src="{{icon.path}}" /></span>',
+        template:
+          '<span ' +
+            'data-ng-repeat="icon in icons" ' +
+            'data-ng-click="clickIcon(icon.relative_path)" ' +
+            'data-ng-style="{\'background-color\': icon.relative_path === field ? \'green\' : \'red\'}" ' +
+            'data-ng-class="{\'is-selected\': icon.relative_path === field}">' +
+            '<img data-ng-src="{{icon.path}}" />' +
+          '</span>',
         link: function(scope) {
-          scope.clickIcon = function(iconPath) {
-            scope.field = iconPath;
-          }
+          scope.clickIcon = function(icon) {
+            scope.field = icon;
+          };
         }
       };
     }

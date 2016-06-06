@@ -39,6 +39,8 @@ angular.module('ikApp').controller('ScreenController', ['$scope', '$location', '
                   $scope.screen.template = angular.copy(data[0]);
                   $scope.screen.orientation = data[0].orientation;
 
+                  setTemplateOptions($scope.screen, $scope.screen.template.empty_options);
+
                   $scope.loading = false;
                 },
                 function error(reason) {
@@ -58,22 +60,26 @@ angular.module('ikApp').controller('ScreenController', ['$scope', '$location', '
             function success(data) {
               $scope.loading = false;
 
-              $scope.screen = data;
+              $timeout(function() {
+                setTemplateOptions(data, data.template.empty_options);
 
-              // Decode the shared channels.
-              $scope.screen.channel_screen_regions.forEach(function (csr) {
-                if (csr.shared_channel) {
-                  // Parse the content of the shared channel
-                  //   Set title and slides of the shared_channel.
-                  csr.shared_channel.content = JSON.parse(csr.shared_channel.content);
-                  csr.shared_channel.title = csr.shared_channel.content.title;
-                  csr.shared_channel.slides = csr.shared_channel.content.slides;
+                $scope.screen = data;
+
+                // Decode the shared channels.
+                $scope.screen.channel_screen_regions.forEach(function (csr) {
+                  if (csr.shared_channel) {
+                    // Parse the content of the shared channel
+                    //   Set title and slides of the shared_channel.
+                    csr.shared_channel.content = JSON.parse(csr.shared_channel.content);
+                    csr.shared_channel.title = csr.shared_channel.content.title;
+                    csr.shared_channel.slides = csr.shared_channel.content.slides;
+                  }
+                });
+
+                if ($scope.screen === {}) {
+                  $location.path('/screen');
                 }
               });
-
-              if ($scope.screen === {}) {
-                $location.path('/screen');
-              }
             },
             // Error getting
             function error(reason) {
@@ -85,6 +91,20 @@ angular.module('ikApp').controller('ScreenController', ['$scope', '$location', '
     }
 
     init();
+
+    var setTemplateOptions = function (screen, options) {
+      // Force object
+      if (!screen.options || screen.options instanceof Array) {
+        screen.options = {};
+      }
+
+      // Update options field.
+      for (var key in options) {
+        if (!screen.options.hasOwnProperty(key)) {
+          screen.options[key] = angular.copy(options[key]);
+        }
+      }
+    };
 
     /**
      * Save the screen and close.
@@ -111,7 +131,6 @@ angular.module('ikApp').controller('ScreenController', ['$scope', '$location', '
      * Save the screen.
      */
     $scope.saveScreen = function saveScreen() {
-      console.log($scope.screen);
       $scope.displayToolbar = false;
       $scope.region = null;
       screenFactory.saveScreen().then(
