@@ -8,5 +8,31 @@
     "edit": "wayfinding-five-rows-edit.html",
     "css": "wayfinding-five-rows.css"
   },
-  "orientation": "portrait"
+  "orientation": "portrait",
+  "tools": {
+    "wayfinding-tool": "../tools/wayfinding-tool.html"
+  },
+  "options": {
+    "arrows": [
+      {
+        "name": "Venstre",
+        "path": "templates/dokk1/screens/tools/arrows/left.png"
+      },
+      {
+        "name": "Højre",
+        "path": "templates/dokk1/screens/tools/arrows/right.png"
+      }
+
+    ],
+    "icons": [
+      {
+        "name": "cup",
+        "path": "templates/dokk1/screens/tools/icons/cup.png"
+      },
+      {
+        "name": "globe",
+        "path": "templates/dokk1/screens/tools/icons/globe.png"
+      }
+    ]
+  }
 }

@@ -82,6 +82,11 @@ class ScreenTemplate {
    */
   protected $enabled;
 
+  /**
+   * @ORM\Column(name="options", type="json_array", nullable=true)
+   * @Groups({"api", "api-bulk", "middleware"})
+   */
+  private $options;
 
   /**
    * Constructor
@@ -344,5 +349,19 @@ class ScreenTemplate {
    */
   public function getTools() {
     return unserialize($this->tools);
+  }
+
+  /**
+   * @return mixed
+   */
+  public function getOptions() {
+    return $this->options;
+  }
+
+  /**
+   * @param mixed $options
+   */
+  public function setOptions($options) {
+    $this->options = $options;
   }
 }

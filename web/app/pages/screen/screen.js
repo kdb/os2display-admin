@@ -111,6 +111,7 @@ angular.module('ikApp').controller('ScreenController', ['$scope', '$location', '
      * Save the screen.
      */
     $scope.saveScreen = function saveScreen() {
+      console.log($scope.screen);
       $scope.displayToolbar = false;
       $scope.region = null;
       screenFactory.saveScreen().then(

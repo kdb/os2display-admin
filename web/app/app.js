@@ -26,6 +26,8 @@ angular.module('ikApp', [
     'itkTextWidget',
     'itkTextAreaWidget',
     'itkNumberWidget',
+    'itkCheckboxWidget',
+    'itkIconPickerWidget',
     'itkChannelPickerWidget',
     'itkSharedChannelPickerWidget',
     'itkChannelRemoverWidget',

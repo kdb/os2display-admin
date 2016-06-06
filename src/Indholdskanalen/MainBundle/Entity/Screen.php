@@ -88,7 +88,6 @@ class Screen {
   /**
    * @ORM\Column(name="options", type="json_array", nullable=true)
    * @Groups({"api", "api-bulk", "search", "sharing", "middleware"})
-   * @JMS\Type("array<string, string>")
    */
   private $options;
 
