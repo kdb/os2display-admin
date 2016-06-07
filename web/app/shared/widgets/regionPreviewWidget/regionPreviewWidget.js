@@ -25,8 +25,7 @@
         restrict: 'E',
         scope: {
           region: '=',
-          screen: '=',
-          width: '='
+          screen: '='
         },
         replace: false,
         templateUrl: 'app/shared/widgets/regionPreviewWidget/region-preview-widget.html?' + window.config.version,

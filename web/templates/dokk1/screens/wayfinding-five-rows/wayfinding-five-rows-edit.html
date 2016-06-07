@@ -3,7 +3,16 @@
     <div class="presentation--inner" style="height: 100%;">
       <div class="presentation--region-horizontal" style="width: 100%; height: 8.33%;">
         <div class="presentation--region-content" data-ng-class="{'is-active': region === 0}" data-ng-click="triggerTool({name: 'wayfinding-tool', region: 0})">
-          <region-preview-widget region="0" screen="screen" class="presentation--region-content-inner"></region-preview-widget>
+          <!--<region-preview-widget region="0" screen="screen" class="presentation--region-content-inner"></region-preview-widget>-->
+          <div>
+            <span data-ng-style="{'border-bottom' : !screen.options.regions[0].subitem ? '1px solid black' : 0}">
+              <img data-ng-src="{{'/templates/dokk1/screens/tools/' + screen.options.regions[0]['arrow']}}" style="max-height: 2em;">
+            </span>
+            <span style="border-bottom: 1px solid black;">
+              <span>{{screen.options.regions[0].text}}</span>
+              <img data-ng-src="{{'/templates/dokk1/screens/tools/' + screen.options.regions[0]['icon']}}" style="max-height: 2em;">
+            </span>
+          </div>
         </div>
       </div>
       <div class="presentation--region-horizontal" style="width: 100%; height: 8.33%;">
