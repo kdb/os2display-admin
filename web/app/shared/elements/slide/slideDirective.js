@@ -64,7 +64,7 @@ angular.module('ikApp').directive('ikSlide', ['slideFactory', 'templateFactory',
 
               scope.theStyle = {
                 width: "" + scope.ikWidth + "px",
-                height: "" + parseFloat(scope.template.ideal_dimensions.height * parseFloat(scope.ikWidth / scope.template.ideal_dimensions.width)) + "px"
+                height: "" + parseFloat(1080.0 * parseFloat(scope.ikWidth / 1920.0)) + "px"
               };
 
               if (scope.ikSlide.options.fontsize) {
