@@ -3,6 +3,7 @@
   "license": "GNU General Public License v3.0",
   "type": "project",
   "description": "The Os2Display distribution",
+  "minimum-stability": "dev",
   "autoload": {
     "psr-0": {
       "": "src/",
@@ -11,6 +12,7 @@
   },
   "require": {
     "os2display/admin-bundle": "dev-kdb-master as 1.0.11",
+    "os2display/core-bundle": "dev-kdb-master as 1.0.0",
     "os2display/default-template-bundle": "^1.0",
     "incenteev/composer-parameter-handler": "^2.0",
     "sonata-project/admin-bundle": "^2.0",
@@ -28,7 +30,7 @@
   "repositories": {
     "os2display/core-bundle": {
       "type": "vcs",
-      "url": "https://github.com/os2display/core-bundle"
+      "url": "https://github.com/kdb/os2display-core-bundle"
     },
     "os2display/admin-bundle": {
       "type": "vcs",
