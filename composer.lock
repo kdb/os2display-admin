@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c4c9030612c491a6aded5d658dac738",
+    "content-hash": "5bc15ecd99c6875a5114023109c49ba9",
     "packages": [
         {
             "name": "cocur/slugify",
@@ -2679,12 +2679,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kdb/os2display-admin-bundle.git",
-                "reference": "56958416bb7b24805ae5a02a93172a7a2cf8bf6f"
+                "reference": "00425037f4f7d63025630f5ac8ac4fbd6d92504e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kdb/os2display-admin-bundle/zipball/56958416bb7b24805ae5a02a93172a7a2cf8bf6f",
-                "reference": "56958416bb7b24805ae5a02a93172a7a2cf8bf6f",
+                "url": "https://api.github.com/repos/kdb/os2display-admin-bundle/zipball/00425037f4f7d63025630f5ac8ac4fbd6d92504e",
+                "reference": "00425037f4f7d63025630f5ac8ac4fbd6d92504e",
                 "shasum": ""
             },
             "require": {
@@ -2701,20 +2701,20 @@
             "support": {
                 "source": "https://github.com/kdb/os2display-admin-bundle/tree/kdb-master"
             },
-            "time": "2018-06-11T17:01:08+00:00"
+            "time": "2018-06-19T07:26:52+00:00"
         },
         {
             "name": "os2display/core-bundle",
-            "version": "1.0.10",
+            "version": "dev-kdb-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/os2display/core-bundle.git",
-                "reference": "29c22e9da24b8b5d1eace3efd65f485fdc665f74"
+                "url": "https://github.com/kdb/os2display-core-bundle.git",
+                "reference": "e2657ca66d60d52b0a49001fc9b610fa0651fc24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/os2display/core-bundle/zipball/29c22e9da24b8b5d1eace3efd65f485fdc665f74",
-                "reference": "29c22e9da24b8b5d1eace3efd65f485fdc665f74",
+                "url": "https://api.github.com/repos/kdb/os2display-core-bundle/zipball/e2657ca66d60d52b0a49001fc9b610fa0651fc24",
+                "reference": "e2657ca66d60d52b0a49001fc9b610fa0651fc24",
                 "shasum": ""
             },
             "require": {
@@ -2754,10 +2754,9 @@
             },
             "description": "Os2Display core",
             "support": {
-                "source": "https://github.com/os2display/core-bundle/tree/1.0.10",
-                "issues": "https://github.com/os2display/core-bundle/issues"
+                "source": "https://github.com/kdb/os2display-core-bundle/tree/kdb-master"
             },
-            "time": "2017-11-22T12:33:23+00:00"
+            "time": "2018-06-19T15:25:59+00:00"
         },
         {
             "name": "os2display/default-template-bundle",
@@ -6122,11 +6121,18 @@
             "alias_normalized": "1.0.11.0",
             "version": "dev-kdb-master",
             "package": "os2display/admin-bundle"
+        },
+        {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "dev-kdb-master",
+            "package": "os2display/core-bundle"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "os2display/admin-bundle": 20
+        "os2display/admin-bundle": 20,
+        "os2display/core-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
