@@ -1,0 +1,76 @@
+{
+  "id": "child-event",
+  "type": "slide",
+  "name": "Børne Arrangement",
+  "icon": "child-event.png",
+  "paths": {
+    "live": "child-event-edit.html",
+    "edit": "child-event-edit.html",
+    "preview": "child-event-preview.html",
+    "css": "child-event.css",
+    "js": "bundles/kkbding2integration/templates/js/childEventSlide.js"
+  },
+  "slide_type": "child-event",
+  "media_type": "image",
+  "script_id": "child-event",
+  "orientation": "portrait",
+  "ideal_dimensions": {
+    "width": "1080",
+    "height": "1920"
+  },
+  "empty_options": {
+    "fontsize": 60,
+    "responsive_fontsize": 4,
+    "bgcolor": "#fff",
+    "headercolor": "#4e4a47",
+    "header": "Overskrift",
+    "paragraph": "Beskrivelse af arrangementet",
+    "dateSimple": "",
+    "timeSimple": "",
+    "placeSimple": "",
+    "infoheader": "Dato for arrangement",
+    "imageZoom": 100,
+    "imageX": 0,
+    "imageY": 0,
+    "date": {
+      "from": "",
+      "to": "",
+      "text": ""
+    },
+    "time": {
+      "first": "",
+      "second": "",
+      "third": "",
+      "fourth": "",
+      "fifth": ""
+    },
+    "place": {
+      "first": "",
+      "second": "",
+      "third": ""
+    },
+    "reference": "Få mere information på bibliotek.kk.dk"
+  },
+  "tools": [
+    {
+      "name": "Title og brødtekst",
+      "id": "header-editor-simple"
+    },
+    {
+      "name": "Dato, tid og sted",
+      "id": "date-time-place"
+    },
+    {
+      "name": "Billede",
+      "id": "image-picker"
+    },
+    {
+      "name": "Billedefokus",
+      "id": "image-focus"
+    },
+    {
+      "name": "Reference",
+      "id": "reference-editor"
+    }
+  ]
+}
