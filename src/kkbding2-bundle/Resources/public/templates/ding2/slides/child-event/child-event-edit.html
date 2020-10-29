@@ -1,22 +1,37 @@
 <div
-  style="background-position: center; background-size: cover; display: flex"
   data-ng-style="{ 
-    'width': theStyle.width, 
-    'height': theStyle.height,
-    'background-image': 'url(' + ikSlide.currentImage + ')',
-    'background-size': ikSlide.options.imageZoom ? ikSlide.options.imageZoom + '%' : 'auto',
-    'background-position-x': ikSlide.options.imageX ? ikSlide.options.imageX + '%' : 'center', 
-    'background-position-y': ikSlide.options.imageY ? ikSlide.options.imageY + '%' : 'center',
-    'background-repeat': 'no-repeat	',
-    'background-color': 'white'
+  'width': theStyle.width, 
+  'height': theStyle.height,
+  'background-color': 'white'
 }"
+  style="display: flex"
 >
   <div class="child-event">
+    <div
+      style="
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        position: absolute;
+        top: 0px;
+      "
+      data-ng-style="{
+        'width': '100%', 
+        'height': '100%',
+        'background-image': 'url(' + ikSlide.currentImage + ')',
+        'background-size': ikSlide.options.imageZoom ? ikSlide.options.imageZoom + '%' : 'cover',
+        'background-position-x': ikSlide.options.imageX ? ikSlide.options.imageX + '%' : 'center', 
+        'background-position-y': ikSlide.options.imageY ? ikSlide.options.imageY + '%' : 'center',
+        'background-repeat': 'no-repeat	',
+        'background-color': 'white'
+      }"
+    />
+
     <svg
       width="100%"
       viewBox="0 0 1099 273"
       fill="none"
-      style="transform: translateY(1px)"
+      style="transform: translateY(1px); position: relative"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path

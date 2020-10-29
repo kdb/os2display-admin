@@ -197,24 +197,24 @@ table {
   color: white;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.78);
 }
-.image-picker-placeholder {
-  height: 316.5px;
+.child-event .image-picker-placeholder {
+  height: 442px;
   width: 250px;
   background-repeat: no-repeat;
   background-color: #f2f2f2;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   clip-path: polygon(
-    0% 43%,
-    17% 55%,
-    35% 55%,
-    49% 47%,
-    69% 47%,
-    90% 58%,
-    100% 73%,
     100% 0,
-    0 0
-  ) !important;
+    0 0,
+    0 61%,
+    13% 69%,
+    35% 68%,
+    50% 63%,
+    65% 61%,
+    85% 63%,
+    100% 69%
+  );
 }
 .reset-margin {
   margin: 0;
@@ -248,6 +248,7 @@ table {
 .child-event-container {
   padding: 0rem 1.75rem;
   background-color: #709690;
+  position: relative;
 }
 .child-event-container--inner {
   transform: translateY(-1rem);

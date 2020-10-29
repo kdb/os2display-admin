@@ -19,6 +19,7 @@
     "height": "1920"
   },
   "empty_options": {
+    "type": "child-event",
     "fontsize": 60,
     "responsive_fontsize": 4,
     "bgcolor": "#fff",
