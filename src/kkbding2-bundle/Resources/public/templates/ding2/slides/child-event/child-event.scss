@@ -266,12 +266,14 @@ table {
   flex-direction: column;
   white-space: pre;
 }
+.child-event-description-container {
+  margin-top: 2rem;
+}
 .child-event-description-header {
   color: #000;
   font-size: 100%;
   line-height: 1.25;
   white-space: initial;
-  margin-top: 2rem;
 }
 .child-event--info-wrapper {
   color: #000;

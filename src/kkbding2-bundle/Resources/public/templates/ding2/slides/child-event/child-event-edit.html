@@ -42,12 +42,26 @@
 
         <div class="child-event-content">
           <div class="child-event-text">
-            <p
-              ng-if="ikSlide.options.paragraph"
-              class="child-event-description-header"
-            >
-              {{ikSlide.options.paragraph}}
-            </p>
+            <div class="child-event-description-container">
+              <p
+                ng-if="ikSlide.options.paragraph"
+                class="child-event-description-header"
+              >
+                {{ikSlide.options.paragraph1}}
+              </p>
+              <p
+                ng-if="ikSlide.options.paragraph"
+                class="child-event-description-header"
+              >
+                {{ikSlide.options.paragraph2}}
+              </p>
+              <p
+                ng-if="ikSlide.options.paragraph"
+                class="child-event-description-header"
+              >
+                {{ikSlide.options.paragraph3}}
+              </p>
+            </div>
 
             <div class="child-event--info-wrapper">
               <p ng-if="ikSlide.options.dateSimple" style="margin: 0.1rem 0px">
