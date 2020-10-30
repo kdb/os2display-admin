@@ -58,8 +58,12 @@
       "id": "header-editor-simple"
     },
     {
-      "name": "Dato, tid og sted",
-      "id": "date-time-place"
+      "name": "Dato",
+      "id": "event-date-picker"
+    },
+    {
+      "name": "Tid",
+      "id": "event-time-picker"
     },
     {
       "name": "Billede",

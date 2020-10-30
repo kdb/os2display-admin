@@ -79,11 +79,17 @@
             </div>
 
             <div class="child-event--info-wrapper">
-              <p ng-if="ikSlide.options.dateSimple" style="margin: 0.1rem 0px">
-                Dato: {{ikSlide.options.dateSimple}}
+              <p ng-if="ikSlide.options.infoheader" style="margin: 0.1rem 0px">
+                {{ikSlide.options.infoheader}}
               </p>
               <p ng-if="ikSlide.options.timeSimple" style="margin: 0.1rem 0px">
-                Tid: {{ikSlide.options.timeSimple}}
+                <div ng-if="ikSlide.options.time.first">
+                  <span>Tid: {{ikSlide.options.time.first}}</span><!--
+                  --><span ng-if="ikSlide.options.time.second">, {{ikSlide.options.time.second}}</span><!--
+                  --><span ng-if="ikSlide.options.time.third">, {{ikSlide.options.time.third}}</span><!--
+                  --><span ng-if="ikSlide.options.time.fourth">, {{ikSlide.options.time.fourth}}</span><!--
+                  --><span ng-if="ikSlide.options.time.fifth">, {{ikSlide.options.time.fifth}}</span>
+                </div>
               </p>
               <p ng-if="ikSlide.options.placeSimple">
                 Sted: {{ikSlide.options.placeSimple}}
