@@ -1,22 +1,37 @@
 <div
-  style="background-position: center; background-size: cover; display: flex"
   data-ng-style="{ 
-    'width': theStyle.width, 
-    'height': theStyle.height,
-    'background-image': 'url(' + ikSlide.currentImage + ')',
-    'background-size': ikSlide.options.imageZoom ? ikSlide.options.imageZoom + '%' : 'auto',
-    'background-position-x': ikSlide.options.imageX ? ikSlide.options.imageX + '%' : 'center', 
-    'background-position-y': ikSlide.options.imageY ? ikSlide.options.imageY + '%' : 'center',
-    'background-repeat': 'no-repeat	',
-    'background-color': 'white'
+  'width': theStyle.width, 
+  'height': theStyle.height,
+  'background-color': 'white'
 }"
+  style="display: flex"
 >
   <div class="child-event">
+    <div
+      style="
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        position: absolute;
+        top: 0px;
+      "
+      data-ng-style="{
+        'width': '100%', 
+        'height': '100%',
+        'background-image': 'url(' + ikSlide.currentImage + ')',
+        'background-size': ikSlide.options.imageZoom ? ikSlide.options.imageZoom + '%' : 'cover',
+        'background-position-x': ikSlide.options.imageX ? ikSlide.options.imageX + '%' : 'center', 
+        'background-position-y': ikSlide.options.imageY ? ikSlide.options.imageY + '%' : 'center',
+        'background-repeat': 'no-repeat	',
+        'background-color': 'white'
+      }"
+    />
+
     <svg
       width="100%"
       viewBox="0 0 1099 273"
       fill="none"
-      style="transform: translateY(1px)"
+      style="transform: translateY(1px); position: relative"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -42,19 +57,39 @@
 
         <div class="child-event-content">
           <div class="child-event-text">
-            <p
-              ng-if="ikSlide.options.paragraph"
-              class="child-event-description-header"
-            >
-              {{ikSlide.options.paragraph}}
-            </p>
+            <div class="child-event-description-container">
+              <p
+                ng-if="ikSlide.options.paragraph"
+                class="child-event-description-header"
+              >
+                {{ikSlide.options.paragraph1}}
+              </p>
+              <p
+                ng-if="ikSlide.options.paragraph"
+                class="child-event-description-header"
+              >
+                {{ikSlide.options.paragraph2}}
+              </p>
+              <p
+                ng-if="ikSlide.options.paragraph"
+                class="child-event-description-header"
+              >
+                {{ikSlide.options.paragraph3}}
+              </p>
+            </div>
 
             <div class="child-event--info-wrapper">
-              <p ng-if="ikSlide.options.dateSimple" style="margin: 0.1rem 0px">
-                Dato: {{ikSlide.options.dateSimple}}
+              <p ng-if="ikSlide.options.infoheader" style="margin: 0.1rem 0px">
+                {{ikSlide.options.infoheader}}
               </p>
               <p ng-if="ikSlide.options.timeSimple" style="margin: 0.1rem 0px">
-                Tid: {{ikSlide.options.timeSimple}}
+                <div ng-if="ikSlide.options.time.first">
+                  <span>Tid: {{ikSlide.options.time.first}}</span><!--
+                  --><span ng-if="ikSlide.options.time.second">, {{ikSlide.options.time.second}}</span><!--
+                  --><span ng-if="ikSlide.options.time.third">, {{ikSlide.options.time.third}}</span><!--
+                  --><span ng-if="ikSlide.options.time.fourth">, {{ikSlide.options.time.fourth}}</span><!--
+                  --><span ng-if="ikSlide.options.time.fifth">, {{ikSlide.options.time.fifth}}</span>
+                </div>
               </p>
               <p ng-if="ikSlide.options.placeSimple">
                 Sted: {{ikSlide.options.placeSimple}}

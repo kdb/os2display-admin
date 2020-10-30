@@ -19,6 +19,7 @@
     "height": "1920"
   },
   "empty_options": {
+    "type": "child-event",
     "fontsize": 60,
     "responsive_fontsize": 4,
     "bgcolor": "#fff",
@@ -57,8 +58,12 @@
       "id": "header-editor-simple"
     },
     {
-      "name": "Dato, tid og sted",
-      "id": "date-time-place"
+      "name": "Dato",
+      "id": "event-date-picker"
+    },
+    {
+      "name": "Tid",
+      "id": "event-time-picker"
     },
     {
       "name": "Billede",
