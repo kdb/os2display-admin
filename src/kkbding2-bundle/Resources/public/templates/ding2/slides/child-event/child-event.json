@@ -1,7 +1,7 @@
 {
   "id": "child-event",
   "type": "slide",
-  "name": "Børne Arrangement",
+  "name": "Børnearrangement",
   "icon": "child-event.png",
   "paths": {
     "live": "child-event-edit.html",
@@ -29,7 +29,7 @@
     "dateSimple": "",
     "timeSimple": "",
     "placeSimple": "",
-    "infoheader": "Dato for arrangement",
+    "infoheader": "",
     "imageZoom": 100,
     "imageX": 0,
     "imageY": 0,
@@ -64,6 +64,10 @@
     {
       "name": "Tid",
       "id": "event-time-picker"
+    },
+    {
+      "name": "Sted",
+      "id": "event-place-simple"
     },
     {
       "name": "Billede",

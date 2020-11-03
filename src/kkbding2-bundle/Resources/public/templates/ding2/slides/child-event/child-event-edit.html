@@ -51,8 +51,20 @@
             class="child-event--header"
             data-ng-style="{'white-space': 'normal'}"
           >
-            {{ikSlide.options.header}}
+            {{ikSlide.options.header1}}
           </div>
+          <div
+          class="child-event--header"
+          data-ng-style="{'white-space': 'normal'}"
+        >
+          {{ikSlide.options.header2}}
+        </div>
+        <div
+        class="child-event--header"
+        data-ng-style="{'white-space': 'normal'}"
+      >
+        {{ikSlide.options.header3}}
+      </div>
         </div>
 
         <div class="child-event-content">
@@ -91,8 +103,8 @@
                   --><span ng-if="ikSlide.options.time.fifth">, {{ikSlide.options.time.fifth}}</span>
                 </div>
               </p>
-              <p ng-if="ikSlide.options.placeSimple">
-                Sted: {{ikSlide.options.placeSimple}}
+              <p ng-if="ikSlide.options.place.first">
+                Sted: {{ikSlide.options.place.first}}
               </p>
             </div>
 
