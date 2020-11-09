@@ -2,7 +2,8 @@
   data-ng-style="{ 
   'width': theStyle.width, 
   'height': theStyle.height,
-  'background-color': 'white'
+  'background-color': 'white',
+  'font-size': theStyle.fontsize
 }"
   style="display: flex"
 >
@@ -31,7 +32,11 @@
       width="100%"
       viewBox="0 0 1099 273"
       fill="none"
-      style="transform: translateY(1px); position: relative"
+      style="
+        transform: scaleY(0.75) translateY(1px);
+        transform-origin: bottom;
+        position: relative;
+      "
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -54,17 +59,17 @@
             {{ikSlide.options.header1}}
           </div>
           <div
-          class="child-event--header"
-          data-ng-style="{'white-space': 'normal'}"
-        >
-          {{ikSlide.options.header2}}
-        </div>
-        <div
-        class="child-event--header"
-        data-ng-style="{'white-space': 'normal'}"
-      >
-        {{ikSlide.options.header3}}
-      </div>
+            class="child-event--header"
+            data-ng-style="{'white-space': 'normal'}"
+          >
+            {{ikSlide.options.header2}}
+          </div>
+          <div
+            class="child-event--header"
+            data-ng-style="{'white-space': 'normal'}"
+          >
+            {{ikSlide.options.header3}}
+          </div>
         </div>
 
         <div class="child-event-content">
@@ -94,16 +99,23 @@
               <p ng-if="ikSlide.options.infoheader" style="margin: 0.1rem 0px">
                 {{ikSlide.options.infoheader}}
               </p>
-              <p ng-if="ikSlide.options.timeSimple" style="margin: 0.1rem 0px">
-                <div ng-if="ikSlide.options.time.first">
-                  <span>Tid: {{ikSlide.options.time.first}}</span><!--
-                  --><span ng-if="ikSlide.options.time.second">, {{ikSlide.options.time.second}}</span><!--
-                  --><span ng-if="ikSlide.options.time.third">, {{ikSlide.options.time.third}}</span><!--
-                  --><span ng-if="ikSlide.options.time.fourth">, {{ikSlide.options.time.fourth}}</span><!--
-                  --><span ng-if="ikSlide.options.time.fifth">, {{ikSlide.options.time.fifth}}</span>
-                </div>
-              </p>
-              <p ng-if="ikSlide.options.place.first">
+              <div ng-if="ikSlide.options.time.first">
+                <span>Tid: {{ikSlide.options.time.first}}</span
+                ><!--
+                  --><span ng-if="ikSlide.options.time.second"
+                  >, {{ikSlide.options.time.second}}</span
+                ><!--
+                  --><span ng-if="ikSlide.options.time.third"
+                  >, {{ikSlide.options.time.third}}</span
+                ><!--
+                  --><span ng-if="ikSlide.options.time.fourth"
+                  >, {{ikSlide.options.time.fourth}}</span
+                ><!--
+                  --><span ng-if="ikSlide.options.time.fifth"
+                  >, {{ikSlide.options.time.fifth}}</span
+                >
+              </div>
+              <p ng-if="ikSlide.options.place.first" style="margin: 0px">
                 Sted: {{ikSlide.options.place.first}}
               </p>
             </div>
