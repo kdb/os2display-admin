@@ -22,7 +22,7 @@ if (!window.slideFunctions["child-event"]) {
         width: "100%",
         height: "100%",
         fontsize:
-          slide.options.fontsize * (scope.scale ? scope.scale : 1.0) + "px",
+          slide.options.fontsize * (scope.scale ? scope.scale : 0.7) + "px",
       };
 
       // Set the responsive fontsize if it is needed.

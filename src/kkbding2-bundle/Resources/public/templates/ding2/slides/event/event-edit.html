@@ -29,20 +29,33 @@
       spellcheck="false"
       data-ng-style="{'border-color': ikSlide.options.headercolor}"
     >
-    {{ikSlide.options.infoheader}}
+      {{ikSlide.options.infoheader}}
     </div>
     <div class="event--info has-placeholder">
       <div ng-if="ikSlide.options.time.first">
-        <span>Tid: {{ikSlide.options.time.first}}</span><!--
-        --><span ng-if="ikSlide.options.time.second">, {{ikSlide.options.time.second}}</span><!--
-        --><span ng-if="ikSlide.options.time.third">, {{ikSlide.options.time.third}}</span><!--
-        --><span ng-if="ikSlide.options.time.fourth">, {{ikSlide.options.time.fourth}}</span><!--
-        --><span ng-if="ikSlide.options.time.fifth">, {{ikSlide.options.time.fifth}}</span>
+        <span>Tid: {{ikSlide.options.time.first}}</span
+        ><!--
+        --><span ng-if="ikSlide.options.time.second"
+          >, {{ikSlide.options.time.second}}</span
+        ><!--
+        --><span ng-if="ikSlide.options.time.third"
+          >, {{ikSlide.options.time.third}}</span
+        ><!--
+        --><span ng-if="ikSlide.options.time.fourth"
+          >, {{ikSlide.options.time.fourth}}</span
+        ><!--
+        --><span ng-if="ikSlide.options.time.fifth"
+          >, {{ikSlide.options.time.fifth}}</span
+        >
       </div>
       <div ng-if="ikSlide.options.place.first">
         <div>Sted: {{ikSlide.options.place.first}}</div>
-        <div ng-if="ikSlide.options.place.second">{{ikSlide.options.place.second}}</div>
-        <div ng-if="ikSlide.options.place.third">{{ikSlide.options.place.third}}</div>
+        <div ng-if="ikSlide.options.place.second">
+          {{ikSlide.options.place.second}}
+        </div>
+        <div ng-if="ikSlide.options.place.third">
+          {{ikSlide.options.place.third}}
+        </div>
       </div>
     </div>
   </div>
