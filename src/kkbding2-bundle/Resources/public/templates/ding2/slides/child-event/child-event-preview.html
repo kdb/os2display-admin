@@ -7,11 +7,31 @@
   "
 >
   <div class="child-event">
+    <div
+    style="
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      position: absolute;
+      top: 0px;
+    "
+    data-ng-style="{
+      'width': '100%', 
+      'height': '100%',
+      'background-image': 'url(' + ikSlide.currentImage + ')',
+      'background-size': ikSlide.options.imageZoom ? ikSlide.options.imageZoom + '%' : 'cover',
+      'background-position-x': ikSlide.options.imageX ? ikSlide.options.imageX + '%' : 'center', 
+      'background-position-y': ikSlide.options.imageY ? ikSlide.options.imageY + '%' : 'center',
+      'background-repeat': 'no-repeat	',
+      'background-color': 'white'
+    }"
+  />
+  
     <svg
       width="100%"
       viewBox="0 0 1099 273"
       fill="none"
-      style="transform: translateY(1px)"
+      style="transform: scaleY(0.75) translateY(1px); transform-origin: bottom;"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -34,16 +54,30 @@
           >
             {{ikSlide.options.header}}
           </div>
+          <div
+          class="child-event--header"
+          data-ng-style="{'white-space': 'normal'}"
+          style="font-size: 10px"
+        >
+          {{ikSlide.options.header2}}
+        </div>
+        <div
+        class="child-event--header"
+        data-ng-style="{'white-space': 'normal'}"
+        style="font-size: 10px"
+      >
+        {{ikSlide.options.header3}}
+      </div>
         </div>
 
-        <div class="child-event--info-wrapper">
-          <p ng-if="ikSlide.options.dateSimple" style="font-size: 7px">
+        <div class="child-event--info-wrapper" style="margin-top: 8px">
+          <p ng-if="ikSlide.options.dateSimple" style="font-size: 8px; font-weight: 600; font-family: KBH-Regular;">
             Dato: {{ikSlide.options.dateSimple}}
           </p>
-          <p ng-if="ikSlide.options.timeSimple" style="font-size: 7px">
+          <p ng-if="ikSlide.options.timeSimple" style="font-size: 8px; font-weight: 600; font-family: KBH-Regular;">
             Tid: {{ikSlide.options.timeSimple}}
           </p>
-          <p ng-if="ikSlide.options.placeSimple" style="font-size: 7px">
+          <p ng-if="ikSlide.options.placeSimple" style="font-size: 8px; font-weight: 600; font-family: KBH-Regular;">
             Sted: {{ikSlide.options.placeSimple}}
           </p>
         </div>
