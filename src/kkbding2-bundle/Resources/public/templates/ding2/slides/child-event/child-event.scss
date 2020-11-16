@@ -37,24 +37,14 @@
   color: white;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.78);
 }
-.child-event .image-picker-placeholder {
+.child-event.image-picker-placeholder {
   height: 442px;
   width: 250px;
   background-repeat: no-repeat;
   background-color: #f2f2f2;
   background-size: 100%;
   background-position: center;
-  clip-path: polygon(
-    100% 0,
-    0 0,
-    0 61%,
-    13% 69%,
-    35% 68%,
-    50% 63%,
-    65% 61%,
-    85% 63%,
-    100% 69%
-  );
+  clip-path: none;
 }
 .reset-margin {
   margin: 0;
@@ -89,6 +79,7 @@
   padding: 0rem 3%;
   background-color: #709690;
   position: relative;
+  min-height: 40%;
 }
 .child-event-container--inner {
   transform: translateY(-3%);

@@ -1,4 +1,4 @@
-<div class="edit-menu {{slide.options.type}}" role="banner">
+<div class="edit-menu" role="banner">
   <div class="edit-menu--inner is-visible third-width">
     <div class="edit-menu--toggle-icon" data-ng-click="close()">X</div>
     <form class="edit-menu--form font-150">
@@ -44,14 +44,31 @@
           </div>
           <div class="small-bottom-margin">
             <div
-              class="image-picker-placeholder"
+              class="image-picker-placeholder {{slide.slide_type}}"
               data-ng-style="{
               'background-image': 'url(' + slide.currentImage + ')',
               'background-size': slide.options.imageZoom ? slide.options.imageZoom + '%' : 'cover',
               'background-position-x': slide.options.imageX ? slide.options.imageX + '%' : 'center', 
               'background-position-y': slide.options.imageY ? slide.options.imageY + '%' : 'center'
             }"
-            ></div>
+            >
+            <div ng-if="slide.slide_type === 'child-event'" style="height: 55%; display: grid; grid-template-rows: auto 1fr;">
+              <svg
+              width="100%"
+              viewBox="0 0 1099 273"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              style="transform: scaleY(0.75) translateY(1px); transform-origin: bottom;"
+            >
+              <path
+                d="M977.461 140.83C1024.8 176.36 1069.24 220.56 1098.51 272.39H1098.5H0.5V0.500031C0.5 0.500031 12.2497 8.50941 16.2497 13.1994C35.7297 36.0094 58.8997 55.4491 83.1897 72.9391C132.58 108.509 187.83 136.69 249.07 143.5C279.91 146.92 311.889 144.929 341.329 134.659C371.449 124.149 399.729 108.499 429.549 97.0592C489.979 73.8792 552.82 56.4292 617.22 49.0092C682.34 41.5092 748.79 44.5093 812.35 61.0493C871.96 76.5593 928.201 103.87 977.461 140.83Z"
+                fill="#709690"
+                style="stroke: #709690"
+              />
+            </svg>
+            <div style="background-color: #709690"  />
+            </div>
+          </div>
           </div>
         </div>
       </div>
