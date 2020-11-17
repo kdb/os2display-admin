@@ -8,14 +8,14 @@
 >
   <div class="child-event">
     <div
-    style="
-      background-position: center;
-      background-size: cover;
-      display: flex;
-      position: absolute;
-      top: 0px;
-    "
-    data-ng-style="{
+      style="
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        position: absolute;
+        top: 0px;
+      "
+      data-ng-style="{
       'width': '100%', 
       'height': '100%',
       'background-image': 'url(' + ikSlide.currentImage + ')',
@@ -25,13 +25,13 @@
       'background-repeat': 'no-repeat	',
       'background-color': 'white'
     }"
-  />
-  
+    />
+
     <svg
       width="100%"
       viewBox="0 0 1099 273"
       fill="none"
-      style="transform: scaleY(0.75) translateY(1px); transform-origin: bottom;"
+      style="transform: scaleY(0.75) translateY(1px); transform-origin: bottom"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -41,44 +41,54 @@
       />
     </svg>
 
-    <div class="child-event-container">
+    <div class="child-event-container" style="min-height: 30%">
       <div class="child-event-container--inner">
-        <div
-          class="has-placeholder"
-          data-ng-style="{'color': ikSlide.options.headercolor}"
-        >
+        <div class="has-placeholder">
           <div
             class="child-event--header"
             data-ng-style="{'white-space': 'normal'}"
             style="font-size: 10px"
           >
-            {{ikSlide.options.header}}
+            {{ikSlide.options.header1}}
           </div>
           <div
-          class="child-event--header"
-          data-ng-style="{'white-space': 'normal'}"
-          style="font-size: 10px"
-        >
-          {{ikSlide.options.header2}}
-        </div>
-        <div
-        class="child-event--header"
-        data-ng-style="{'white-space': 'normal'}"
-        style="font-size: 10px"
-      >
-        {{ikSlide.options.header3}}
-      </div>
+            class="child-event--header"
+            data-ng-style="{'white-space': 'normal'}"
+            style="font-size: 10px"
+          >
+            {{ikSlide.options.header2}}
+          </div>
+          <div
+            class="child-event--header"
+            data-ng-style="{'white-space': 'normal'}"
+            style="font-size: 10px"
+          >
+            {{ikSlide.options.header3}}
+          </div>
         </div>
 
-        <div class="child-event--info-wrapper" style="margin-top: 8px">
-          <p ng-if="ikSlide.options.dateSimple" style="font-size: 8px; font-weight: 600; font-family: KBH-Regular;">
-            Dato: {{ikSlide.options.dateSimple}}
+        <div class="child-event--info-wrapper" style="margin: 0.1rem 0px">
+          <p ng-if="ikSlide.options.infoheader">
+            {{ikSlide.options.infoheader}}
           </p>
-          <p ng-if="ikSlide.options.timeSimple" style="font-size: 8px; font-weight: 600; font-family: KBH-Regular;">
-            Tid: {{ikSlide.options.timeSimple}}
-          </p>
-          <p ng-if="ikSlide.options.placeSimple" style="font-size: 8px; font-weight: 600; font-family: KBH-Regular;">
-            Sted: {{ikSlide.options.placeSimple}}
+          <div ng-if="ikSlide.options.time.first">
+            <span>Tid: {{ikSlide.options.time.first}}</span
+            ><!--
+              --><span ng-if="ikSlide.options.time.second"
+              >, {{ikSlide.options.time.second}}</span
+            ><!--
+              --><span ng-if="ikSlide.options.time.third"
+              >, {{ikSlide.options.time.third}}</span
+            ><!--
+              --><span ng-if="ikSlide.options.time.fourth"
+              >, {{ikSlide.options.time.fourth}}</span
+            ><!--
+              --><span ng-if="ikSlide.options.time.fifth"
+              >, {{ikSlide.options.time.fifth}}</span
+            >
+          </div>
+          <p ng-if="ikSlide.options.place.first" style="margin: 0px">
+            Sted: {{ikSlide.options.place.first}}
           </p>
         </div>
 
